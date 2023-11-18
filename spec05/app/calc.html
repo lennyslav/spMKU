@@ -1,0 +1,89 @@
+{extends file="../templates/main.html"}
+{block name=footer}przykładowa tresć stopki{/block}
+
+				<header id="header" class="alt">
+				<h1><a href="index.html">Alpha</a> by HTML5 UP</h1>
+				<nav id="nav">
+				<ul>
+				<li><a href="index.php">Home</a></li>
+
+				<li><a href="#" class="button">Sign Up</a></li>
+				</ul>
+				</nav>
+				</header>
+
+			
+				<section id="banner">
+				    <h2>Kalkulator kredytowy</h2>
+					<p>Oblicz swój kredyt</p>
+					<ul class="actions special">
+					</ul>
+				</section>
+
+			
+			{block name=main}
+				<section id="main" class="container">
+
+					<section class="box special">
+						<header class="major">
+							<h2>Calc</h2>
+							<form action="{$app_url}/app/calc.php" method="get">
+								<fieldset>
+								<label for="id_kw">Wpisz kwotę pożyczki: </label>
+								<input id="id_kw" type="number" name="kw" value="{$kw}" /><br />
+
+								<label for="id_op">Wybierz oprocentowanie: </label>
+								<input id="id_op" type="number" name="op" value="{$op}" min="0,1" max="100" /><br /><br />
+	
+								<label for="id_os">Wprowadź czas spłaty w miesiącach: </label>
+								<input id="id_os" type="number" name="os" value="{$os}" /><br />
+								</fieldset>	
+								<input type="submit" value="Oblicz" class="pure-button pure-button-primary" />
+							</form>	
+						</header>
+						{if isset($messages)}
+							{if count($messages) > 0} 
+								<h4>Wystąpiły błędy: </h4>
+								<ol class="err">
+								{foreach  $messages as $msg}
+								{strip}
+									<li>{$msg}</li>
+								{/strip}
+								{/foreach}
+								</ol>
+							{/if}
+						{/if}
+
+						{if isset($result)}
+							<h4>Wynik</h4>
+							<p class="res">
+							{$result}
+							</p>
+						{/if}>
+					</section>
+					{/block}
+			
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</footer>
+
+		</div>
+		
+
+		
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

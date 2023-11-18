@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>{$page_title|default: "Domyślny tytuł"}</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta name="description" content="{$page_description|default:'Opis domyślny'}">
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+
+	<body class="landing is-preload">
+	<div id="page-wrapper">
+ 
+    <header id="header" class="alt">
+        <nav id="nav">
+            <ul>
+                <li><a href="index.php">Home</a></li>
+
+                <li><a href="#" class="button">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <section id="banner">
+		<h2>{$page_header|default:"Domyślny Nagłówek"}</h2>
+		<p>{$page_description|default:"Domyślny opis"}</p>
+		<ul class="actions special">
+		</ul>
+	</section>
+
+    
+    <section id="main" class="container">
+
+        <section class="box special">
+            {block name=main }  Zawartosc kalkulatora  {/block}
+        </section>
+    </section>
+
+
+
+    <footer id="footer">
+        <ul class="icons">
+            <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+            <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+        </ul>
+        <ul class="copyright">
+            <li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+    </footer>
+
+
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.dropotron.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+
+
+    </div>
+    </body>
+</html>
